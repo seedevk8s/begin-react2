@@ -1,9 +1,10 @@
 import React from 'react';
 import MyComponent from "./MyComponent";
+import Say from "./Say";
 
 function App() {
       return (
-          <MyComponent name={3}> 부모컴포넌트</MyComponent>
+          <Say />
       );
 }
 
