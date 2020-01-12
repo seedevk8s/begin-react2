@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const MyComponent = ({ name, children }) => {
            // 비구조화 할당
@@ -10,6 +11,10 @@ const MyComponent = ({ name, children }) => {
 
 MyComponent.defaultProps = {
     name: '디폴트 props 이름'
+}
+
+MyComponent.protoTypes = {
+    name: PropTypes.string.isRequired
 }
 
 export default MyComponent;

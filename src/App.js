@@ -3,7 +3,7 @@ import MyComponent from "./MyComponent";
 
 function App() {
       return (
-          <MyComponent > 부모컴포넌트</MyComponent>
+          <MyComponent name={3}> 부모컴포넌트</MyComponent>
       );
 }
 
