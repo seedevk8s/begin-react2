@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 const EventPractice = () => {
     const [form, setForm] = useState({
-        message: ''
+        message: '',
+        username: ''
     });
-    const { message } = form;
+    const { message, username } = form;
 
     const onChange = e => {
         const nextForm = {
@@ -15,8 +16,11 @@ const EventPractice = () => {
     };
 
     const onClick = () => {
-        alert(message);     //클릭이벤트 발생하면 => 현재 comment값을 메시지 박스로 띄움.
-        setForm({message: ''});     // comment값을 공백으로 설정.
+        alert(message + ': ' + username);     //클릭이벤트 발생하면 => 현재 comment값을 메시지 박스로 띄움.
+        setForm({
+            message: '',
+            username: ''
+        });     // comment값을 공백으로 설정.
     };
 
     return (
@@ -26,8 +30,15 @@ const EventPractice = () => {
             <input
                 type="text"
                 name="message"
-                placeholder="유저명"
+                placeholder="메시지"
                 value={message}
+                onChange={onChange}
+            />
+            <input
+                type="text"
+                name="username"
+                placeholder="유저명"
+                value={username}
                 onChange={onChange}
             />
             <button onClick={onClick}>확인</button>
