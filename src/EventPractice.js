@@ -23,6 +23,12 @@ const EventPractice = () => {
         });     // comment값을 공백으로 설정.
     };
 
+    const onKeyPress = e => {
+        if (e.key === 'Enter') {
+            onClick();
+        }
+    };
+
     return (
         <div>
             <h1>이벤트 연습!!</h1>
@@ -40,6 +46,7 @@ const EventPractice = () => {
                 placeholder="유저명"
                 value={username}
                 onChange={onChange}
+                onKeyPress={onKeyPress}
             />
             <button onClick={onClick}>확인</button>
         </div>
