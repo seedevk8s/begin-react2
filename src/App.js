@@ -1,10 +1,9 @@
 import React from 'react';
-import MyComponent from "./MyComponent";
-import Say from "./Say";
+import EventPractice from "./EventPractice";
 
 function App() {
       return (
-          <Say />
+          <EventPractice />
       );
 }
 
